@@ -32,15 +32,12 @@ fn parse_dest_base(dest_base_str: &str) -> u8 {
                 panic!("Invalid destination base: {}", n);
             }
             n
-        },
+        }
         Err(_) => panic!("Invalid destination base: {}", dest_base_str),
     }
 }
 
-
-
 fn main() {
-
     /// arguments are accepted in the form of:
     ///    <dest_base> <input> <org_base>
     /// or <dest_base> <input>
@@ -50,7 +47,6 @@ fn main() {
     // check if dest_base is valid, ie, between 2 and 36
 
     let dest_base: u8 = parse_dest_base(&args.dest_base);
-
 
     // define variables for input and org_base
     let mut input: String = args.input.clone();
@@ -80,7 +76,6 @@ fn main() {
         Ok(n) => n,
         Err(_) => panic!("Invalid input: {}", args.input),
     };
-
 
     // convert modified input to dest_base
     let output: Radix<u64> = radix(input, dest_base as u32 as u8);
