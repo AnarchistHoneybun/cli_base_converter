@@ -15,6 +15,6 @@ The base of the input number/base to convert from
 The program accepts input in two formats
 1. \<dest_base\> \<input\> \<org_base\>
 or
-2. <dest_base> <input>
+2. \<dest_base\> \<input\>
 
 org_base is calculated if not provided
